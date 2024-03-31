@@ -1,0 +1,438 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#header {
+  background-color: brown ;
+  height: 50px;
+  position: fixed; 
+  top: 0; /* Đặt vị trí ở đầu trang */
+  width: 100%; /* Chiều rộng tối đa */
+  z-index: 1000; /
+}
+#header .hmain li {
+  list-style: none;
+  height: 50px;
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  margin: 0 10px; /* Khoảng cách giữa các thẻ li */
+}
+#header .hmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fix_width{
+  width: 130px;
+}
+#search {
+  width: 400px; /* Đặt chiều rộng của ô input */
+  height: 40px; /* Đặt chiều cao của ô input */
+  border-radius: 20px; /* Đặt góc bo tròn */
+  padding: 5px 10px; /* Thêm padding cho ô input */
+  border: none; /* Loại bỏ đường viền */
+  outline: none; /* Loại bỏ đường viền khi ô input được focus */
+  font-size: 16px; /* Đặt kích thước chữ */
+  text-align: center; /* Căn giữa văn bản */
+}
+
+#header .hmain ul {
+  display: flex;
+  list-style-type: none; /* Xóa dấu đầu dòng của danh sách */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+#header .hmain li {
+  margin: 0 10px; /* Khoảng cách giữa các thẻ li */
+}
+#header .hmain li:hover{
+  color: #fff;
+}
+.hmain img {
+  height: 40px;
+  width: 40px;
+}
+.hmain p {
+  float: right;
+  width: 150px;
+  font-size: 18px;
+  margin-left: 5px;
+}
+.box_name_product {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.star_rating img {
+  height: 15px;
+  width: 15px;
+}
+.star_rating p {
+  font-weight: 100;
+}
+.box_name h1 {
+  font-size: 20px;
+  font-weight: 800;
+  padding-right: 10px;
+}
+#content {
+  position: absolute;
+  min-height: 800px;
+  width: 1000px;
+  left: 18%;
+}
+.video_content {
+  border-radius: 25px;
+  overflow: hidden;
+}
+.options {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.img_preview {
+  list-style: none; /* Ẩn dấu chấm của các mục trong danh sách */
+  white-space: nowrap; /* Ngăn các mục xuống dòng */
+  overflow-x: auto; /* Hiển thị thanh cuộn ngang nếu nội dung vượt quá khung */
+}
+
+.img_preview li {
+  display: inline-block; /* Hiển thị các mục cùng một hàng */
+  margin-right: 5px; /* Khoảng cách giữa các mục */
+}
+.image_buttons img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+.image_buttons li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 5px;
+}
+.image_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.image_buttons ul {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+}
+.image_buttons button {
+  margin: 5px;
+  border: none; /* Loại bỏ viền của nút */
+  background: none; /* Loại bỏ màu nền */
+  padding: 0; /* Loại bỏ khoảng đệm */
+}
+.detail_product_left {
+  float: left; /* Di chuyển phần content left sang trái */
+  width: 60%; /* Đặt chiều rộng của content left */
+  height: 1000px;
+}
+.inf1 img {
+  width: 15px;
+  height: 20px;
+  margin-left: 20px;
+}
+.inf1 p {
+  float: right;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+.inf2 img {
+  height: 20px;
+  width: 20px;
+}
+.inf2 {
+  margin: 10px;
+}
+
+.box_warranty_info {
+  border: 1px solid #ccc;
+  float: left;
+  width: 49%;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}
+.box_column_address {
+  float: right;
+  width: 49%;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  padding: 8px;
+}
+.box_column_address li {
+  list-style: none;
+  background-color: #F2F2F2;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 5px;
+}
+.box_adr li a:hover {
+  color: red;
+}
+.box_adr {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+.box_column_address p {
+  text-align: center;
+  font-size: 15px;
+}
+.detail_product_right {
+  float: right; /* Di chuyển phần content right sang phải */
+  height: 1000px;
+  width: 40%; /* Đặt chiều rộng của content right */
+}
+.list_linked {
+  align-items: center;
+}
+.scrollable-list {
+  margin-top: 10px;
+}
+.list_linked button {
+  display: block; /* Hiển thị nút dưới dạng block để nó chiếm toàn bộ chiều rộng */
+  width: 120px; /* Đặt chiều rộng của nút */
+  margin: 5px;
+  float: left;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.list_linked button:hover {
+  background-color: #ccc;
+  color: #000;
+  border: 2px red solid;
+}
+.list_linked ul li {
+  list-style: none;
+  margin-left: 7px;
+}
+.video_container video,
+.image_container img {
+  border-radius: 20px;
+}
+.custom-button.active {
+  background-color: lightgray; /* Màu nền mới khi nút được nhấn */
+}
+.list_variants li {
+  list-style: none;
+}
+.list_variants img {
+  height: 25px;
+  width: 25px;
+}
+.liv1 {
+  border: 2px solid #000; /* Định nghĩa border mặc định */
+  width: 120px;
+  margin: 10px;
+  border-radius: 20px;
+}
+.liv1.active {
+  border-color: red; /* Màu viền khi phần tử được chọn */
+}
+.list_variants li button {
+  background-color: #ffff;
+  border: none;
+  display: block;
+  margin: 10px;
+  position: relative;
+  left: 10px;
+}
+.list_variants li {
+  margin: 5px;
+}
+.list_variants {
+  display: flex;
+  align-self: center;
+}
+.liv1 img {
+  float: left;
+}
+.liv1:hover {
+  border: 3px red solid;
+}
+#box_doi_moi .boxleft{
+  width: 49%;
+  float: left;
+  display: inline-block;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+
+}
+.boxleft img{
+  float: right;
+}
+.boxleft P{
+  width: 130px;
+  float: right;
+}
+.boxleft {
+ /* Căn chỉnh theo chiều dọc */
+  height: 65px;
+}
+
+.boxleft > div,
+.boxleft > p {
+  display: inline-block; /* Hiển thị cùng hàng */
+  vertical-align: middle; 
+}
+
+#box_doi_moi .boxright{
+  width: 50%;
+  height: 65px;
+  float: right;
+
+}
+.boxright p{
+  width: 180px;
+  text-align: center;
+}
+
+#box_doi_moi{
+  background-color: #eeeeef;
+  border-radius: 5px;
+  margin: 10px;
+  min-height: 70px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.boxleft:hover,
+.boxright:hover{
+  border: red 2px  solid;
+  border-radius: 10px;
+}
+.selected {
+  color: red;
+  border: 2px solid red;
+  border-radius: 10px;
+}
+.box_pr{
+  width: 95%;
+  height: 60px;
+  background-color: #fff3f3;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+.box_pr_img img{
+  width: 385px;
+  height: 55px;
+  margin-left: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+.box_dc img{
+  height: 30px;
+  width: 30px;
+}
+.box_dc{
+  background-color: #fee2e2;
+  height: 50px;
+  width: 97%;
+  margin-top: 5px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+}
+.box_nd_pr{
+  width: 97%;
+  height: 180px;
+  border: 1px  solid #fee2e2;
+  margin-left: 10px;
+  padding: 10px;
+}
+.hot_sale{
+  width: 100%;
+  height: 100px;
+  background-color: #fee2e2;
+  padding: 10px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+#box_pay{
+  width: 97%;
+  height: 70px;
+  margin: 10px;
+}
+.left_pay button{
+  width: 300px;
+  height: 70px;
+  background-color: red;
+  border-radius: 20px;
+  border: 2px solid red;
+  padding: 5px;
+}
+.left_pay{
+  width: 200px;
+}
+.right_pay{
+  width: 70px;
+}
+.right_pay  > button{
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border: 2px solid red;
+  border-radius: 10px;
+}
+.right_pay img{
+  width: 24px;
+  height: 30px;
+}
+.left_pay{
+  margin-left: 5px;
+}
+.right_pay{
+  float: right;
+  margin-right: 5px;
+}
+.left_pay,
+.right_pay {
+  display: inline-block;
+}
+#pay_visa_mater{
+  width: 97%;
+  height: 70px;
+  margin: 10px;
+}
+.left_pay_after{
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.right_pay_online{
+  float: right;
+  margin-right: 5px ;
+  margin-top: 5px;
+}
+.right_pay_online, .left_pay_after{
+  display: inline-block;
+}
+.left_pay_after  button,
+.right_pay_online  button
+{
+  height: 60px;
+  width: 185px;
+  border-radius: 20px;
+  background-color: #277cea;
+  border: 2px #277cea solid;
+}
+#main {
+}
